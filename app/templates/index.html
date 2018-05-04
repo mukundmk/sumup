@@ -6,6 +6,8 @@
         <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/c3.min.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='css/toastr.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+
         <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
@@ -14,41 +16,6 @@
         <script src="{{ url_for('static', filename='js/index.js') }}"></script>
         <script src="{{ url_for('static', filename='js/jquery.autocomplete.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/toastr.min.js') }}"></script>
-        <style>
-            .c3-line {
-                stroke-width: 2px;
-            }
-            .navbar, .nav {
-                margin-bottom: 20px;
-            }
-            .abs-center-x {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .autocomplete-suggestions {
-                border: 1px solid #d0d7de;
-                background: #FFF;
-                overflow-y: auto;
-            }
-            .autocomplete-suggestion {
-                padding: 2px 5px;
-            }
-            .autocomplete-selected {
-                background: #eef1f3;
-            }
-            .autocomplete-suggestions strong {
-                font-weight: normal;
-                color: #000; }
-
-            .autocomplete-group {
-                padding: 2px 5px;
-            }
-            .autocomplete-group strong {
-                display: block;
-                border-bottom: 1px solid #d0d7de;
-            }
-        </style>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">Stock Price Visualizer</a>
             <form class="form-inline abs-center-x">
