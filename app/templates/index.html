@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Price Visualizer</title>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/c3.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/toastr.min.css') }}" rel="stylesheet">
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/d3.v5.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/c3.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.autocomplete.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/toastr.min.js') }}"></script>
+        <style>
+            .c3-line {
+                stroke-width: 2px;
+            }
+            .navbar, .nav {
+                margin-bottom: 20px;
+            }
+            .abs-center-x {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .autocomplete-suggestions {
+                border: 1px solid #d0d7de;
+                background: #FFF;
+                overflow-y: auto;
+            }
+            .autocomplete-suggestion {
+                padding: 2px 5px;
+            }
+            .autocomplete-selected {
+                background: #eef1f3;
+            }
+            .autocomplete-suggestions strong {
+                font-weight: normal;
+                color: #000; }
+
+            .autocomplete-group {
+                padding: 2px 5px;
+            }
+            .autocomplete-group strong {
+                display: block;
+                border-bottom: 1px solid #d0d7de;
+            }
+        </style>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Stock Price Visualizer</a>
+            <form class="form-inline abs-center-x">
+                <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search" value="Apple Inc.">
+            </form>
+        </nav>
+    </head>
+    <body>
+        <div class="container">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="month" data-toggle="tab" href="#" role="tab" aria-controls="month" aria-selected="false">1 month</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="year" data-toggle="tab" href="#" role="tab" aria-controls="year" aria-selected="false">1 year</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="5year" data-toggle="tab" href="#" role="tab" aria-controls="5year" aria-selected="false">5 years</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="max" data-toggle="tab" href="#" role="tab" aria-controls="max" aria-selected="true">Max</a>
+                </li>
+            </ul>
+            <div id="chart"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="close-price" name="price" class="form-check-input" value="4" checked>
+                <label class="form-check-label" for="close-price">Closing Price</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="high-price" name="price" class="form-check-input" value="2">
+                <label class="form-check-label" for="high-price">High Price</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="low-price" name="price" class="form-check-input" value="3">
+                <label class="form-check-label" for="low-price">Low Price</label>
+            </div>
+        </div>
+    </body>
+</html>
