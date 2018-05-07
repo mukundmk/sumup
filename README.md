@@ -7,7 +7,7 @@ stock price visualization
 
 ## instructions
 *  install and create a virtual environment (optional): <br>
-   <code>$pip3 install virtualenv</code> <br>
+   <code>$pip3.6 install virtualenv</code> <br>
    <code>$virtualenv -p python3.6 venv</code> <br>
    <code>$source venv/bin/activate</code> <br>
 
